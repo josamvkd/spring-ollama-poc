@@ -16,8 +16,8 @@ public class OllamaAIChatService
 
     public String chatWithOllamaLlama(String message)
     {
-        return chatClient
-                .prompt(message)
+        return chatClient.prompt()
+                .user(message)
                 .call()
                 .content();
     }
